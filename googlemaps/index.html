@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>LLM- Tasca 0.3 - Mostrar els elements d'un fitxer JSON
+</title>
+      <script type="text/javascript" src="readgooglemaps.js"></script> <!-- Archivo JS Statico-->
+      <link rel="stylesheet" type="text/css" href="Style/Style.css"> <!-- Css personalizo -->
+      <link rel="stylesheet" type="text/css" href="Style/bootstrap.css"> <!-- Css Bootstrap -->
+      <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Responsive -->
+      <script type="text/javascript" src="js/scripts.js"></script>  <!--javascrip para el cambio de color-->
+      <meta charset="utf-8">
+      
+      <style type="text/css">
+         @font-face {
+         font-family: 'A';
+         src: url('A.otf');
+         src: url('A.otf') format('otf'),
+         ),
+         url('A.ttf') format('truetype'),
+         font-weight: normal;
+         font-style: normal;
+         }
+         @font-face {
+         font-family: 'BananasPersonalUse';
+         src: url('fonts/BananasPersonalUse.ttf');
+         url('BananasPersonalUse') format('truetype')
+         font-weight: normal;
+         font-style: normal;
+         }
+      </style>
+   </head>
+   <body>
+     
+      
+      <div class="navbar">
+         <div id="container-fluid">
+            <a href="#" class="scrollup" title="Subir arriba"><img src="img/chen.png"></img></a>
+            
+            <table id="tituloPrincipal">
+               <tr>
+                  <td>Resultats consulta a Google Maps 2018 &reg;</td>
+               <tr>
+                  <td>
+                     <select>
+                        <option>Google Restaurants</option>
+                        <option style="cursor: not-allowed;">Google Space</option>
+                     </select>
+                  </td>
+               </tr>
+               </tr>
+            </table>
+            </center>
+            <br>
+            <table class="tabla2"> <!-- Tabla que muestra el menú superior -->
+               <tr>
+                  <td style="background-color: transparent;">
+                     <button type="button" class="btn-warning dropdown-toggle" data-toggle="dropdown" id="viewBtn" value="Veure Restaurants" onclick="viewJSON();">SEARCH </button>
+                     <button type="button" class="btn-success " data-toggle="dropdown" id="viewBtn" value="Veure Restaurants" onclick="viewJSON();" style="cursor: not-allowed;">MP3</button>
+                     <button type="button" class="btn-success " data-toggle="dropdown" id="viewBtn" value="Veure Restaurants" onclick="viewJSON();" style="cursor: not-allowed;">TOP SITES</button>
+                     <button type="button" class="btn-success" onClick="BG_change()">BG_COLOR</button><!-- Con este Boton cambiamos el color del fondo es un script en una hoja a parte -->
+                     <button type="button" class="btn-success " onClick="BG_change()" style="cursor: not-allowed;">PDF</button>
+                     <button type="button" class="btn-info " onClick="window.location.href=window.location.href" style="cursor: not-allowed;">IMG</button>
+                  </td>
+               </tr>
+            </table>
+            
+         </div>
+      </div>
+      
+   
+      <div id="container"> <!-- Bootstrap ,skeleton y css personalizado --> 
+        <div class="container">
+            <div class="page">
+               <font class="pagetitle"> <!--  css personalizado --> 
+                  <Center>
+                  Fer una ReCerca dels millors restaurants de la Zona Centre de Mallorca 
+                  <center>
+               </font>
+               <div id="results"> <!-- Este es el div que enlaca con la hoja json (Document.getElemntById) -->
+                 
+               </div>
+            </div>
+        
+         <div id="footer" >
+            <div id="heading"> <!-- este script está en movimiento gracias a javascript en otro script -->
+             &reg; LLM- Tasca 0.3 - Mostrar els elements d'un fitxer JSON
+2018 &reg;
+            </div>
+         </div>
+        
+      </div>
+      </div>
+   </div>
+   </body>
+</html>

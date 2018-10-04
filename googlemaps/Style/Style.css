@@ -1,0 +1,271 @@
+html {}
+
+body {
+    background-color: rgb(77, 221, 165);
+    /* rgb(214, 249, 199); */
+    color: white;
+    font-size: 16px;
+    font-family: monospace;
+}
+
+#tituloPrincipal {
+    
+    border: 0.7px solid white;
+    border-radius: 0px solid transparent;
+    background-color: steelblue;
+    font-size: 35px;
+    color: rgb(2, 216, 199);
+    height: 90px;
+    font-family: A;
+    text-shadow: 1px 3px 2px rgb(2, 3, 4);
+    font-weight: 990;
+}
+
+#titulolateral {
+    font-family: BananasPersonalUse;
+}
+
+
+
+
+#tituloPrincipal:hover {
+    border: 0.8px solid red;
+    height: 90px;
+    border-radius: 0px solid transparent;
+    background-color: white;
+    font-size: 35px;
+    color: mediumseagreen;
+    font-family: A;
+    text-shadow: 1px 3px 2px rgb(2, 3, 4);
+    font-weight: 990;
+}
+
+input {
+    background-color: black;
+    color: lime;
+}
+
+select {
+    background-color: black;
+}
+
+.tabla2 {
+    background-color: transparent;
+    position: absolute;
+    left: 62px;
+}
+
+button {
+    background-image: linear-gradient( rgba( 255, 255, 255, .35), rgba( 255, 255, 255, 0));
+    background-image: -moz-linear-gradient( rgba( 255, 255, 255, .35), rgba( 255, 255, 255, 0));
+    background-image: -ms-linear-gradient( rgba( 255, 255, 255, .35), rgba( 255, 255, 255, 0));
+    background-image: -o-linear-gradient( rgba( 255, 255, 255, .35), rgba( 255, 255, 255, 0));
+    background-image: -webkit-linear-gradient( rgba( 255, 255, 255, .35), rgba( 255, 255, 255, 0));
+    border: 1px solid rgba( 0, 0, 0, 1);
+    border-radius: 3px;
+    box-shadow: inset 0 1px 1px rgba( 255, 255, 255, .35), inset 0 -1px 1px rgba( 0, 0, 0, .2);
+    -moz-box-shadow: inset 0 1px 1px rgba( 255, 255, 255, .35), inset 0 -1px 1px rgba( 0, 0, 0, .2);
+    -ms-box-shadow: inset 0 1px 1px rgba( 255, 255, 255, .35), inset 0 -1px 1px rgba( 0, 0, 0, .2);
+    -o-box-shadow: inset 0 1px 1px rgba( 255, 255, 255, .35), inset 0 -1px 1px rgba( 0, 0, 0, .2);
+    color: darkred;
+    display: inline;
+    font: bold 15px/30px Helvetica, Verdana, Tahoma;
+    height: 30px;
+    margin: 0px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 -1px 0 rgba( 0, 0, 0, .4);
+    width: 100px;
+    position: relative;
+    left: 0%;
+}
+
+@import url('http://twitter.github.com/bootstrap/assets/css/bootstrap.css');
+.container-fluid {
+    margin-top: 10px;
+}
+
+.super {
+    width: 65%;
+    margin-left: 25px;
+    border: 2px solid black;
+    border-radius: 3px;
+}
+
+table {
+    color: black;
+    background-color: coral;
+    text-decoration: bold;
+    border-radius: 1px;
+    font-weight: bold;
+    height: 100px;
+    position: center;
+    margin-left: 25%;
+    text-align: center;
+    border: 0px solid double #13ff64;
+}
+
+td {
+    border: 0px solid #dddddd;
+    line-height: 30px;
+    height: 25px;
+    background-color: white;
+    left: 25px;
+}
+
+
+/* *************Menu Desplegable de Response.Types *********/
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+#footer {
+    position: fixed;
+    text-align: center;
+    font-size: 19px;
+    font-family: 'A';
+    left: 0px;
+    bottom: 0px;
+    height: 30px;
+    width: 100%;
+    background-color: #00abba;
+}
+
+#results {
+    font-weight: 300;
+    text-decoration: bold;
+    font-stretch: all;
+}
+
+.scrollup {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    border-radius: 90px;
+    bottom: 50px;
+    right: 100px;
+    display: none;
+    text-indent: -9999px;
+    background-image: url(img/chen.png) no-repeat;
+    background-color: #000;
+}
+
+.page {
+    background: steelblue;
+    border: 5px solid #785b37;
+    border-radius: 10px;
+    color: #222;
+    margin-top: 25%;
+    
+    padding: 0 30px 25px;
+    width: 740px;
+}
+
+.pagetitle {
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    color: #f5ac23;
+    font-family: 'A';
+    font-size: 29px;
+    font-style: italic;
+    text-transform: uppercase;
+    font-weight: bold;
+    height: 52px;
+    line-height: 50px;
+    margin: 10 auto;
+    position: relative;
+    text-align: justify-all;
+    text-shadow: 1px 1px 1px #303030, 0 0 6px #ffdE00;
+    top: -10px;
+    width: 247px;
+    z-index: 9;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: black;
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    width: 100%;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navbar a:hover {
+    background: #ddd;
+    color: black;
+}
+
+.main {
+    padding: 16px;
+    margin-top: 30px;
+    height: 1500px;
+    /* Used in this example to enable scrolling */
+}
+.list-group,.list-group-item  {
+
+
+
+    text-transform: uppercase;
+    background-color: #fed;
+    border-radius: 5px;
+    
+    text-align: center;
+    text-decoration: none;
+}
+
+.rest1 {
+    background-color: black;
+    color:yellow;
+    text-decoration: bold;
+}
+table table-dark {
+	
+}
