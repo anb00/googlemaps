@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title></title>
+      <script type="text/javascript" src="readgooglemaps.js"></script>
+      <link rel="stylesheet" type="text/css" href="Style/Style.css">
+      <style type="text/css">
+         @font-face {
+         font-family: 'A';
+         src: url('A.otf');
+         src: url('A.otf') format('otf'),
+         ),
+         url('A.ttf') format('truetype'),
+         font-weight: normal;
+         font-style: normal;
+         }
+      </style>
+   </head>
+   <body >
+      <!-- <script type="text/javascript">
+         window.onload = BG_change;
+         
+         function BG_change()
+         {
+            document.body.style.backgroundColor='rgb('+
+            Math.floor(Math.random() * 256) +','+
+            Math.floor(Math.random()*256) +','+
+            Math.floor(Math.random()*256) + ')';
+            setTimeour('BG_chane()',50);
+            }
+         </script> -->
+      </script>
+      <div id="re">
+         <div id="myDiv" style="width: 100%;height: 100%;">
+            <div id="container">
+               <table id="tituloPrincipal">
+                  <tr>
+                     <td style="background-color:red;"> Resultats consulta a Google Maps</td>
+                  </tr>
+               </table>
+               <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" id="viewBtn" value="Veure Restaurants" onclick="viewJSON();">SEARCH</button><br/>
+               <button type="button" class="btn btn-danger dropdown-toggle" onClick="window.location.href=window.location.href">Click!!</button>
+               <hr>
+            </div>
+            <div class="table-responsive">
+
+
+            </div>
+               <div id="results"></div>
+
+            </div>
+         </div>
+      </div>
+   </body>
+</html>

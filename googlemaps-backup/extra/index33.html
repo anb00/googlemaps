@@ -1,0 +1,299 @@
+<html>
+    <head>
+        <title>Resultats consulta a Google Maps</title>
+        <script src="readgooglemaps.js"></script>
+        <link rel="stylesheet" type="text/css" href="skeleton.css">
+        <style type="text/css">
+        	
+table {
+    background: #f6f6f6;
+    font-size: 14px;
+    margin: 0 auto;
+    -webkit-box-shadow: 0 0 10px hsla(0,0%,0%,.05),
+                        0 0 200px hsla(0,0%,100%,.5);
+       -moz-box-shadow: 0 0 10px hsla(0,0%,0%,.05),
+                        0 0 200px hsla(0,0%,100%,.5);
+            box-shadow: 0 0 10px hsla(0,0%,0%,.05),
+                        0 0 200px hsla(0,0%,100%,.5);
+}
+
+        </style>
+         <style type="text/css">
+        body {
+    background: mistyrose  0 0 repeat;
+    font-family: sans-serif;
+}
+hgroup {
+    margin: 0 auto;
+    text-align: center;
+    width: 500px;
+}
+h1 {
+    color: #333;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 40px;
+    text-shadow: 0 1px 1px hsla(0,0%,100%,.75);
+}
+h2 {
+    color: #777;
+    font-family: serif;
+    font-style: italic;
+    line-height: 24px;
+    margin-bottom: 24px;
+    text-shadow: 0 1px 1px hsla(0,0%,100%,.75);
+} */
+table {
+    background: #f6f6f6;
+    font-size: 14px;
+    margin: 0 auto;
+    -webkit-box-shadow: 0 0 10px hsla(0,0%,0%,.05),
+                        0 0 200px hsla(0,0%,100%,.5);
+       -moz-box-shadow: 0 0 10px hsla(0,0%,0%,.05),
+                        0 0 200px hsla(0,0%,100%,.5);
+            box-shadow: 0 0 10px hsla(0,0%,0%,.05),
+                        0 0 200px hsla(0,0%,100%,.5);
+}
+tr{
+    background-color: #f9f9f9;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(hsla(0,0%,0%,0)), to(hsla(0,0%,0%,.1)));
+    background-image: -webkit-linear-gradient(top, hsla(0,0%,0%,0), hsla(0,0%,0%,.1));
+    background-image:    -moz-linear-gradient(top, hsla(0,0%,0%,0), hsla(0,0%,0%,.1));
+    background-image:     -ms-linear-gradient(top, hsla(0,0%,0%,0), hsla(0,0%,0%,.1));
+    background-image:      -o-linear-gradient(top, hsla(0,0%,0%,0), hsla(0,0%,0%,.1));
+    border: 1px solid #ccc;
+    border-bottom: 2px solid #ccc;
+    font-weight: bold;
+    text-shadow: 0 1px 1px hsla(0,0%,100%,.75);
+}
+td {
+    border: none;
+    color: #444;
+}
+.posts, .snaps, .acorns, .ranking {
+    text-align: center;
+}
+.name {
+    width: 150px;
+}
+.posts {
+    width: 50px;
+}
+.snaps {
+    width: 50px;
+}
+.acorns {
+    width: 50px;
+}
+.ranking {
+    width: 100px;
+}
+tr:nth-child(2n) {  
+   background: #eee;  
+}
+td {
+    border: 1px solid #ccc;
+    color: #777;
+    padding: 15px 10px;
+}
+.admin {
+    color: #c4453c;
+}
+.supporter {
+    color: #207cca;
+}
+/* header {position:relative;min-height:202px;background: url(http://www.hopesearch.org/images/accents/topright.png) top right no-repeat;background-size: auto 190px;}
+footer{position:relative;height:207px;width:auto;font-family:"palatino linotype", palatino, serif;background-image: url(http://www.hopesearch.org/images/backgrounds/hope_sketch_trans.png);} /* dbg:border:1px purple dotted; */
+/*nav{position:relative;float:left;margin-top:0px;width:208px;height:462px;z-index:1;} /* dbg:border:1px orange dotted; */
+/*nav a{margin-left:16px;display:block;width:183px;height:32px;background:#330000;-moz-box-shadow:inset 4px 4px 6px 2px #663333;-webkit-box-shadow:inset 4px 4px 6px 2px #663333;box-shadow:inset 4px 4px 6px 2px #663333;background-image:-webkit-linear-gradient(right, #330000 75%, #660000 100%);background-image:-moz-linear-gradient(right, #330000 75%, #660000 100%);background-image:-ms-linear-gradient(right, #330000 75%, #660000 100%);background-image:-o-linear-gradient(right, #330000 75%, #660000 100%);background-image:linear-gradient(to right, #330000 75%, #660000 100%);-webkit-border-radius:8px;-moz-border-radius:8px;border-radius:8px;text-shadow:1px 1px 3px #000000;font-family:Arial;color:#ffffff;font-size:18px;padding:5px 5px 5px 12px;margin-top:6px;text-decoration:none;behavior: url(shivs/PIE.js);}
+nav a:hover{background:#660000;text-decoration:none;color:yellow;}
+nav span{margin-left:16px;display:block;width:183px;height:32px;background:#330000;-moz-box-shadow:inset 4px 4px 6px 2px #663333;-webkit-box-shadow:inset 4px 4px 6px 2px #663333;box-shadow:inset 4px 4px 6px 2px #663333;background-image:-webkit-linear-gradient(right, #330000 75%, #660000 100%);background-image:-moz-linear-gradient(right, #330000 75%, #660000 100%);background-image:-ms-linear-gradient(right, #330000 75%, #660000 100%);background-image:-o-linear-gradient(right, #330000 75%, #660000 100%);background-image:linear-gradient(to right, #330000 75%, #660000 100%);-webkit-border-radius:8px;-moz-border-radius:8px;border-radius:8px;text-shadow:1px 1px 3px #000000;font-family:Arial;color:#ffffff;font-size:18px;padding:5px 5px 5px 12px;margin-top:6px;  text-decoration:line-through;behavior: url(shivs/PIE.js);}
+ol{margin:0px;padding-left:24px;list-style-type:disc}
+ul{margin:0px;padding:0px;list-style-type:none;}
+dl{margin:0px;padding: 0px;}
+table{background-color:transparent;border-style:none;}
+img#fb-f {height:18px;border:none;}
+a#visit-fb{text-shadow:1px 1px 1px rgba(158,158,158,0.8);font-weight:bold;color:#837100;letter-spacing:0pt;word-spacing:0pt;font-family:"palatino linotype", palatino, serif;line-height:1.2;z-index:2;}
+#home-calendar{top:530px;width:75%;min-height:162px;margin:0px auto 0px auto;font-weight:bold;z-index:5;}
+#msg-title-disp-container{text-align:center;}
+#message-title-display{min-height:242px;min-width:341px;margin:3px auto;display:inline-block;text-align:left;padding: 20px 20px 20px;font-size:24px;background-color:rgb(255, 255, 191);border:2px solid rgb(255, 191, 0);border-radius:20px;box-shadow: 0px 0px 4px 4px #FFA500 inset, 0px 0px 0px 1px #FFFFFF;} /* width:373px; */
+/*#container{position:relative;margin:0px auto 0px auto;width:auto;min-height:650px;background:url(/images/accents/topright.png) top right no-repeat;background-size:auto 190px;}
+#content{position:relative;margin-left:244px;padding-top:5px;padding-right:59px;min-height:509px;width:auto;z-index:1;}
+a:hover{background-color:#E9B7B7;}
+.list-frame{margin:3px auto;padding: 20px 20px 20px;display:inline-block;text-align:left;background-color:rgb(255, 255, 191);border:2px solid rgb(255, 191, 0);border-radius:20px;box-shadow: 0px 0px 4px 4px #FFA500 inset, 0px 0px 0px 1px #FFFFFF;} /* min-height:242px;min-width:341px;width:373px;font-size:24px; */
+/*.font-notice{text-shadow:2px 2px 3px rgba(51,0,0,0.4);font-weight:normal;color:#330000;letter-spacing:-0.8pt;word-spacing:2pt;font-size:28px;text-align:center;font-family:georgia, serif;line-height:1}
+.pagetitle{position:relative;width:500px;margin:0px auto 22px auto;text-align:center;text-shadow:2px 2px 3px rgba(51,0,0,0.4);font-weight:normal;color:#330000;letter-spacing:-0.8pt;word-spacing:2pt;font-size:47px;font-family:georgia, serif;line-height:1;z-index:2;} /* dbg:border:1px green dotted; org:*/
+/*.subtitle{height:60px;width:500px;margin:0px auto 0px auto;text-align:center;text-shadow:1px 1px 1px rgba(158,158,158,0.8);font-weight:normal;color:#837100;letter-spacing:0pt;word-spacing:0pt;font-size:22px;font-family:"palatino linotype", palatino, serif;line-height:1.2;z-index:2;} /* dbg:border:1px blue dotted; org:margin-top:0px;margin-left:20px; */
+/*#footer{position:relative;height:207px;width:auto;font-family:"palatino linotype", palatino, serif;background-image: url(http://www.hopesearch.org/images/backgrounds/hope_sketch_trans.png);} /* dbg:border:1px purple dotted; */
+/*#footer-content{margin:0px 0px 0px 260px;padding-right:59px;text-align:center;} /* dbg:border:1px blue dotted;position:relative;width:auto;height:198px; */
+#header{position:relative;min-height:202px;}/* dbg:border:1px red dotted; */
+/*#hcolunm-left{position:relative;float:left;min-height:201px;width:208px;background:url("http://www.hopesearch.org/images/backgrounds/hopelogo-res.png") top left no-repeat;background-position:37px 42px;}/* dbg:}border:1px red dotted; */
+#header-content{position:relative;width:auto;margin-left:260px;padding-top:54px;padding-right:59px;}/* dbg:border:1px blue dotted; */
+/*#social-media{width:208px;margin:auto 0px auto 0px;padding-top:45px;text-align:right;float:left;} /* dng:border:1px red dotted; */
+/*#under-corner{float:right;width:170px;height:80px;margin:0px 45px 0px 20px;z-index:3;}
+/*#locaddr{text-align:center;position:relative;padding:10px;width:814px;font-family:"palatino linotype", palatino, serif;} */
+.pagetitle{position:relative;width:500px;margin:0px auto 22px auto;text-align:center;text-shadow:2px 2px 3px rgba(51,0,0,0.4);font-weight:normal;color:#330000;letter-spacing:-0.8pt;word-spacing:2pt;font-size:47px;font-family:georgia, serif;line-height:1;z-index:2;} 
+header {
+    position: relative;
+    min-height: 202px;
+    background: url(http://www.hopesearch.org/images/accents/topright.png) top right no-repeat;
+    background-image: url(http://www.hopesearch.org/images/accents/topright.png);
+    background-position-x: right;
+    background-position-y: top;
+    background-size: auto 190px;
+    background-repeat-x: no-repeat;
+    background-repeat-y: no-repeat;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: initial;
+    background-size: auto 190px;
+}
+        </style> 
+    </head>
+    <body >
+        <header>  <div id="header-content">
+                    <p class="pagetitle">Welcome !!</p><!-- Display Page Title -->
+                    <p class="subtitle"></p>
+                </div> </header>
+        
+    	<div id="container">
+        <h1>Resultats consulta a Google Maps</h1>
+        <input type="button" id="viewBtn" value="Veure Restaurants" onclick="viewJSON();"><br/>
+        
+           <input type="button" id="viewBtn" value="Veure Restaurants"  onclick="viewJSON2();">
+          <hr>
+          <div id="res"></div>
+
+
+
+          <table class="table" border=1>
+<tr>
+<td><strong>Este es el ID:</strong> <script> for (var i = 0; i<response.results.length;i++ ) {
+            response.results[i].id;
+             
+        
+         /*document.getElementById("results").innerHTML = response.results[i].id;
+        document.getElementById("space").innerHTML = response.results[i].name;
+        document.getElementById("latitud").innerHTML = response.results[i].geometry.location.lat; */
+        
+        document.write("<strong>"+response.results[i].name+"</strong>");</script>
+<div id="results">
+            
+                              
+        </div>
+</td>
+</tr>
+<tr>
+
+
+<td>
+<strong>Nombre:</strong>
+<div id="space"></div>
+    </td>
+</tr>
+<tr>
+    <td>
+<strong>Latitud:</strong>
+<div id="latitud"></div>
+
+    </td>
+</tr>
+<tr>
+<td>
+<strong>Este es la direccon:</strong>
+
+
+    </td>
+</tr>
+          </table>
+<hr>
+<div id="tab"></div>
+
+
+</div>
+<hr>
+<table id="latitude" > 
+	<tr><td>
+		<div id="latitude"></div>
+	</td></tr>
+</table>
+<hr>
+
+
+<div  style="background-color:transparent;" width="10px" height="90px" id="resultado">
+</div>
+
+<script type="text/javascript">
+    function loadJSON(callback) {   
+    var xobj = new XMLHttpRequest();
+    xobj.overrideMimeType("application/json");
+    xobj.open('GET', 'google_maps.json', true); 
+    xobj.onreadystatechange = function () {
+        if (xobj.readyState == 4 && xobj.status == "200") {
+            var responseText = xobj.responseText;
+            // Parse JSON string into object
+            var actual_JSON = JSON.parse(responseText);
+            callback(actual_JSON);
+        }
+    };
+    xobj.send(null);  
+}
+
+function viewJSON() {
+    loadJSON(function(response) {
+        /* Aqui l'objecte response representa l'objecte JSON que ens 
+           ha retornat el servidor */
+
+        /* for (var x in response.results) {
+            response.results[x].id;
+            response.results[x].name;
+            response.results[x].geometry.location.lat;
+            
+*/
+         for (var i = 0; i<response.results.length;i++ ) {
+            response.results[i].id;
+             
+        var table=document.getElementById(table);
+         /*document.getElementById("results").innerHTML = response.results[i].id;
+        document.getElementById("space").innerHTML = response.results[i].name;
+        document.getElementById("latitud").innerHTML = response.results[i].geometry.location.lat; */
+        document.write("<table border=1 double id=table><tr><td>");
+        document.write("Nombre del Restaurante:</td></tr><td>");
+        document.write("<strong>"+response.results[i].name+"</strong>");
+        document.write("</td></tr><td>");
+        
+        document.write("Latitud GPS:</td><tr><td>");
+        document.write(response.results[i].geometry.location.lat);
+         document.write("</td></tr><td>");
+        document.write("Longitud</td><tr><td>");
+        document.write(response.results[i].geometry.location.lng);
+         document.write("</td></tr><tr><td>");
+
+         /*document.write(response.results[i].icon);*/
+
+
+
+
+/*document.write(response.results[i].icon);*/
+document.write("<img src="+response.results[i].icon+">");
+         document.write("</td></tr><tr><td>");                   /* eSto HAY QU convertirlo en imagen */
+        
+        document.write(response.results[i].types);    /* Esto hay que convertirlo en desplegable HTML */
+        document.write("</td></tr></table >")
+        document.write("<hr>");
+         
+      
+
+               
+
+               }
+       
+    });
+}
+  
+
+</script>
+
+    </body>
+</html>

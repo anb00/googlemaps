@@ -1,0 +1,108 @@
+body {
+    background-color: rgb(214, 249, 199);
+    color: white;
+    font-size: 16px;
+    font-family: monospace;
+}
+
+#tituloPrincipal {
+    border: 1px solid double;
+    border-radius: 0px solid transparent;
+    background-color: red;
+    font-size: 35px;
+    color: white;
+    font-family: A;
+    text-shadow: 1px 3px 2px rgb(2, 3, 4);
+    font-weight: 990;
+}
+
+@font-face {
+    font-family: 'A';
+    src: url('A.otf');
+    src: url('A.otf') format('otf'), ), url('A.ttf') format('truetype'), font-weight: normal;
+    font-style: normal;
+}
+
+
+/* https://jsfiddle.net/radiantstatic/4rw6xaj1/ */
+
+button {
+    background-image: linear-gradient( rgba( 255, 255, 255, .35), rgba( 255, 255, 255, 0));
+    background-image: -moz-linear-gradient( rgba( 255, 255, 255, .35), rgba( 255, 255, 255, 0));
+    background-image: -ms-linear-gradient( rgba( 255, 255, 255, .35), rgba( 255, 255, 255, 0));
+    background-image: -o-linear-gradient( rgba( 255, 255, 255, .35), rgba( 255, 255, 255, 0));
+    background-image: -webkit-linear-gradient( rgba( 255, 255, 255, .35), rgba( 255, 255, 255, 0));
+    border: 1px solid rgba( 0, 0, 0, 1);
+    border-radius: 3px;
+    box-shadow: inset 0 1px 1px rgba( 255, 255, 255, .35), inset 0 -1px 1px rgba( 0, 0, 0, .2);
+    -moz-box-shadow: inset 0 1px 1px rgba( 255, 255, 255, .35), inset 0 -1px 1px rgba( 0, 0, 0, .2);
+    -ms-box-shadow: inset 0 1px 1px rgba( 255, 255, 255, .35), inset 0 -1px 1px rgba( 0, 0, 0, .2);
+    -o-box-shadow: inset 0 1px 1px rgba( 255, 255, 255, .35), inset 0 -1px 1px rgba( 0, 0, 0, .2);
+    color: darkred;
+    display: inline;
+    font: bold 15px/30px Helvetica, Verdana, Tahoma;
+    height: 30px;
+    margin: 5px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 -1px 0 rgba( 0, 0, 0, .4);
+    width: 100px;
+    position: relative;
+    left: 45%;
+}
+
+@import url('http://twitter.github.com/bootstrap/assets/css/bootstrap.css');
+.container {
+    margin-top: 10px;
+}
+
+table {
+    color: black;
+    text-decoration: bold;
+    border-radius: 8px;
+    width: 90%;
+    position: center;
+    margin-left: 4%;
+    text-align: center;
+    border: 0px;
+}
+
+th,
+td {
+    background-color: white;
+    border: 1px solid #dddddd;
+    line-height: 30px;
+}
+
+th {
+    text-align: center;
+    font-weight: bold;
+}
+
+input {
+    margin: 0px!important;
+}
+
+@media screen and (max-width: 1400px) {
+    .table-responsive {
+        border: 1px solid #ddd;
+        margin-bottom: 15px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        width: 100%;
+        background-color: transparent;
+    }
+    .table-responsive>.table {
+        margin-bottom: 0;
+    }
+    .table-responsive>.table>thead>tr>th,
+    .table-responsive>.table>tbody>tr>th,
+    .table-responsive>.table>tfoot>tr>th,
+    .table-responsive>.table>thead>tr>td,
+    .table-responsive>.table>tbody>tr>td,
+    .table-responsive>.table>tfoot>tr>td {
+        white-space: nowrap;
+    }
+}
+
+.dafont {}
